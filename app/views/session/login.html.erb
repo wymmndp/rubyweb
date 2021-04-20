@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%= render 'users/header' %>
+<body class="push-body html not-front not-logged-in no-sidebars page-user">
+    <div id="main">
+        <div id="main_inner">
+            <div class="region region-content">
+                <div class="block block-system block-odd first last clearfix" id="block-system-main">
+         
+                <%= form_for :session, url: login_path,html: {id: "user-login"} do |f| %>
+                    <div>
+                        <div class="form-item form-type-textfield form-item-name">
+                            <%= f.label :username %>
+                            <%= f.text_field :name, placeholder: "Enter your name", class: "form-text required" %>
+                        </div>
+                        <div class="form-item form-type-password form-item-pass">
+                            <%= f.label :password %>
+                            <%= f.password_field :password, placeholder: "Enter your password",class: "form-text required",id:"edit-pass" %>
+                        </div>
+                        <div class="form-actions form-wrapper" id="edit-action">
+                            <%= f.submit "Đăng Nhập", class: "click-login" %>
+                        </div>
+                    </div>
+                
+                  <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#user-login').validate({
+                rules: {
+                    username: {
+                        required:true,
+                        minlength:3,
+                    },
+                    pass: {
+                        required:true,
+                        minlength:6
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,2 @@
+class Gamehaving < ApplicationRecord
+end

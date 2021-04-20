@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%= render "users/header" %>
+
+<body class="push-body html not-front not-logged-in no-sidebars page-user page-user-register">
+    <div id="main">
+        <div id="main_inner">
+            <div id="block-system-main" class="block block-system block-odd first last clearfix">
+               
+                <%= form_for @user, html: {id: "user-register-form",class: "user-info-from-cookie"} do |f| %>
+                   <div>
+                   <div class="register-form--title">
+                   Tạo Tài Khoản Mới
+               </div>
+               <div id="edit-account" class="form-wrapper">
+                   <div class="form-item form-type-textfield form-item-name form-register"> 
+                       <%= f.label :name, "Name" %>
+                       <div class="col-md-6">
+                       <%= f.text_field :name, class: "username form-text required", placeholder: "Nhập tên tài khoản" %>
+                       </div>
+                   </div>
+                   <div class="form-item form-type-textfield form-item-name form-register"> 
+                       <%= f.label :password, "Password" %>
+                       <div class="col-md-6">
+                       <%= f.password_field :password, class: "username form-text required", placeholder: "Nhập mật khẩu" %>
+                       </div>
+                   </div>
+                   <div class="form-item form-type-textfield form-item-name form-register"> 
+                   <%= f.label :password_confirmation, "Password Confirmation" %>
+                       <div class="col-md-6">
+                       <%= f.password_field :password_confirmation, class: "username form-text required", placeholder: "Nhập lại mật khẩu" %>
+                       </div>
+                   </div>
+               </div>
+               <div id="edit-actions" class="form-actions form-wrapper">
+                   <%= f.submit "Register", class: "form-submit", id:"register-submit" %>
+               </div>
+                   </div>
+                   
+                  <% end %>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <script>
+        $(document).ready(function() {
+            $('#user-register-form').validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 3,
+                    },
+                    pass: {
+                        required: true,
+                        minlength: 6
+                    }
+                }
+            })
+            $('#edit-name').keyup(function() {
+                var username = $(this).val().trim();
+                if (username != '' && username.length>3) {
+                    $.ajax({
+                        url: "{{route('checkUsername')}}",
+                        type: 'post',
+                        data: {
+                            _token: '{{csrf_token()}}',
+                            username: username
+                        },
+                        success: function(data) {
+                            $('.checkAcc').css('display', 'block');
+                            $('.checkAccount').html(data);
+                        }
+                    });
+                } else {
+                    $('.checkAcc').css('display', 'none');
+                    $(".checkAccount").html("");
+                }
+            });
+        });
+        </script>
+    </footer>
+</body>
+
+</html>
