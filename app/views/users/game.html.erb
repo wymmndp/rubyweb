@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%= render "users/header" %>
+
 <body class="push-body html front not-logged-in no-sidebars page-games">
     <div id="main" style="margin-top: 15px;">
         <div id="main-inner">
@@ -9,17 +10,8 @@
                 <div class="desktop">
                     <div class="nonloop owl-carousel owl-loaded owl-drag owl-theme">
                         <div class="owl-stage-outer">
-                            <div class="owl-stage">
-                                <div class="owl-item active center">
-                                    <div class="item">
-                                        <img class="" src="https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fheather%2Fhome%2FEGS_RockstarGames_RedDeadRedemption2_G1A_00-1920x1080-308f101576da37225c889173094f373f2afc56c1.jpg?h=1080&resize=1&w=1920" alt="">
-                                    </div>
-                                </div>
-                                <div class="owl-item active">
-                                    <div class="item">
-                                        <img src="https://cdn2.unrealengine.com/egs-dragonquestxisechoesofanelusiveage-squareenix-g1a-05-1920x1080-960515148.jpg?h=1080&resize=1&w=1920" alt="">
-                                    </div>
-                                </div>
+                            <div class="owl-stage" id="load">
+
 
                             </div>
                         </div>
@@ -38,7 +30,7 @@
                                 </div>
                             </div>
                             <div class="css-8netip" data-component="renderContent">
-                                <div class="css-167ntke">Detail</div>
+                                <div class="css-167ntke"><%= @game.detailgame%></div>
                             </div>
                             <div class="css-qh9qd6" data-component="renderContent">
                                 <div class="css-1fdl3ev-Description-styles__ctaInner"><span class="css-r50pc8"></span>
@@ -55,9 +47,15 @@
                                             <div class="css-1tv9h97">
                                                 <div class="css-shjp5s-PurchaseButton-styles__ctaButtons">
                                                     <div class="css-lax46w-ButtonGroup__buttonGroup" style="justify-content: center;" data-component="ButtonGroup">
-                                                         <a href="/game/play/<%= @game.id %>" class="css-1775eex btn-play" data-testid="purchase-cta-button" data-component="BaseButton"><span class="css-70r44h-PurchaseCTA__ctaText" data-component="Message">
+                                                       <% if @havegame >0 %>
+                                                             <a href="../game/play/<%= @game.id %>" class="css-1775eex btn-play" data-testid="purchase-cta-button" data-component="BaseButton"><span class="css-70r44h-PurchaseCTA__ctaText" data-component="Message">
                                                                 Chơi Game
-                                                        </span></a>
+                                                            </span></a>
+                                                       <% else %>
+                                                            <button class="css-1775eex btn-add" data-testid="purchase-cta-button" data-component="BaseButton"><span class="css-70r44h-PurchaseCTA__ctaText" data-component="Message">
+                                                                Thêm vào giỏ hàng
+                                                            </span></button>
+                                                       <% end %>
                                                     </div>
                                                 </div>
                                             </div>
@@ -73,7 +71,7 @@
                         <div class="css-pgs42s-TwoColumnGroup__left" data-testid="left-column">
                             <div class="css-qqz4er" data-component="DesktopStickToTop">
                                 <h2 class="css-ktp848" id=""><span data-component="Message">About
-                                         <%= @game.namegame %></span></h2>
+                                        <%= @game.namegame %></span></h2>
                             </div>
                         </div>
                         <div class="css-1wd5p3d-TwoColumnGroup__right" data-testid="right-column">
@@ -179,34 +177,43 @@
     </div>
     <footer>
         <script>
-            $('.nonloop').owlCarousel({
-                center: true,
-                items: 2,
-                loop: false,
-                margin: 30,
-                nav: true,
-            });
-            <%# $(document).ready(function() {
+            $(document).ready(function() {
+                var string = "<%= @game.imgtoshow%>";
+                var html = '';
+                var imgArray = string.split(";")
+                for (var i = 0; i < imgArray.length; i++) {
+                    html += '<div class="owl-item active"><div class="item"><img class="" src="' + imgArray[i] + '" alt=""></div></div>'
+                }
+                $("#load").append(html)
+
+                $('.nonloop').owlCarousel({
+                    center: true,
+                    items: 2,
+                    loop: false,
+                    margin: 30,
+                    nav: false,
+                    dots: true
+                });
+
                 function addProductToCart(username, id) {
                     $.ajax({
-                        url: "{{route('addProductToCart')}}",
-                        type: 'post',
+                        url: "/addGameToCart",
+                        type: 'get',
                         data: {
-                            _token: '{{csrf_token()}}',
                             username: username,
                             id: id
                         },
                         success: function(data) {
-                            alert(data);
+                            alert("Thêm vào giỏ hàng thành công");
                         },
                     });
                 }
                 $('.btn-add').on('click', function() {
-                    var idgame = '{{$game->id}}';
-                    var username = '{{session()->get("username")}}';
+                    var idgame = '<%= @game.id %>';
+                    var username = '<%= session[:user_id]%>';
                     addProductToCart(username, idgame);
                 });
-            }) %>
+            })
         </script>
     </footer>
 </body>

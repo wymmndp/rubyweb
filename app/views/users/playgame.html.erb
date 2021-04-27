@@ -1,99 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    #block-views-tags-block {
+        display: none
+    }
+</style>
 <%= render "users/header" %>
 <body>
-    <div id="main">
-        <div id="main-inner">
-            <!-- playgame -->
-            <div class="embed-responsive embed-responsive-21by9">
-                <iframe class="embed-responsive-item" src="<%= @game.linkgame %>"></iframe>
-            </div>
-           
-        </div>
-    </div>
-    <%# <script>
-        $(document).ready(function() {
-            function loadListComment(idgame) {
-                $.ajax({
-                    url: "{{route('loadListComment')}}",
-                    type: 'post',
-                    data: {
-                        _token: '{{csrf_token()}}',
-                        idgame: idgame,
-                    },
-                    success: function(data) {
-                        $('#area-comments').html(data);
-                    },
-                })
-            }
-            $('.reply').on('click', function() {
-                var id = $(this).attr('id');
-                var idroot = $(this).data('idroot');
-                alert(idroot)
-                $('#commento-body-' + id).after(function() {
-                    $('#commento-body-' + id).append(
-                        '<div class="commento-button-margin"> <div class="commento-textarea-container"><textarea id="commento-textarea-' +
-                        id + '"placeholder="Add a comment"></textarea></div><button id="' + id +
-                        '" data-idroot="' + idroot + '" class="commento-button commento-submit-button add-comment">Add Comment</button> <div class="commento-round-check commento-anonymous-checkbox-container">  </div><a  class="commento-markdown-button"></a></div>'
-                    );
-                })
-            })
-            // add comment của mình (không phải reply)
-            function addCommentRoot(username, txt, idgame) {
-                $.ajax({
-                    url: "{{route('addCommentRoot')}}",
-                    type: 'post',
-                    data: {
-                        _token: '{{csrf_token()}}',
-                        username: username,
-                        txt: txt,
-                        idgame: idgame
-                    },
-                    success: function(data) {
-                        alert(data);
-                        loadListComment(idgame);
-                    },
-                });
-            }
-            $(document).on('click', '.add-comment-root', function() {
-                var txt = $("#commento-textarea-root").val();
-                if (txt.length > 0) {
-                    var username = '{{session()->get("username")}}';
-                    var idgame = '{{$idgame}}'
-                    addCommentRoot(username, txt, idgame);
-                } else alert('Nhập Bình Luận')
-            })
-            // reply comment
-            function replyComment(username, replytxt, idgame, replyidcomment, idroot) {
-                $.ajax({
-                    url: "{{route('replyComment')}}",
-                    type: 'post',
-                    data: {
-                        _token: '{{csrf_token()}}',
-                        username: username,
-                        replytxt: replytxt,
-                        idgame: idgame,
-                        replyidcomment: replyidcomment,
-                        idroot: idroot
-                    },
-                    success: function(data) {
-                        alert(data);
-                        loadListComment(idgame);
-                    },
-                });
-            }
-            $(document).on('click', '.add-comment', function() {
-                var username = '{{session()->get("username")}}';
-                var idgame = '{{$idgame}}';
-                var replyidcomment = $(this).attr('id');
-                var idroot = $(this).data('idroot');
-                var txt = $("#commento-textarea-" + replyidcomment).val();
-                replyComment(username, txt, idgame, replyidcomment, idroot);
-            })
-        })
-    </script> %>
+    <!-- playgame -->
+    <iframe src="<%= @game.linkgame %>" style="width:100%;height:500px;border:0"></iframe>
 </body>
 
 </html>

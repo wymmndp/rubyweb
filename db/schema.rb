@@ -10,21 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_19_150055) do
+ActiveRecord::Schema.define(version: 2021_04_26_135957) do
 
   create_table "danhmucs", charset: "utf8mb4", force: :cascade do |t|
     t.text "tendanhmuc"
     t.text "imgdanhmuc"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "gamehavings", charset: "utf8mb4", force: :cascade do |t|
-    t.text "username"
+    t.string "name"
     t.integer "idgame"
     t.text "type"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "games", charset: "utf8mb4", force: :cascade do |t|
@@ -34,11 +30,17 @@ ActiveRecord::Schema.define(version: 2021_04_19_150055) do
     t.text "linkgame"
     t.integer "iddm"
     t.text "detailgame"
+    t.datetime "time"
+    t.text "imgtoshow"
+  end
+
+  create_table "preinvoices", charset: "utf8mb4", force: :cascade do |t|
+    t.string "username"
+    t.integer "idgame"
   end
 
   create_table "users", primary_key: "name", id: :string, charset: "utf8mb4", force: :cascade do |t|
     t.string "password_digest"
-    t.text "type"
     t.binary "avatar", size: :long
     t.integer "coinhave"
     t.integer "allcoin"
@@ -46,8 +48,6 @@ ActiveRecord::Schema.define(version: 2021_04_19_150055) do
     t.text "lastname"
     t.text "email"
     t.datetime "time"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

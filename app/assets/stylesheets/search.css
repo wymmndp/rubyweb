@@ -817,7 +817,6 @@
     border-bottom-right-radius: 4px
 }
 
-
 .ui-datepicker-multi-4 .ui-datepicker-group {
     width: 25%
 }
@@ -7939,12 +7938,6 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
     position: relative;
     float: left;
     padding: 6px 12px;
-    margin-left: -1px;
-    line-height: 1.42857143;
-    color: #337ab7;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #ddd
 }
 
 .pagination>li:first-child>a,
@@ -7960,16 +7953,6 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
     border-bottom-right-radius: 4px
 }
 
-.pagination>li>a:focus,
-.pagination>li>a:hover,
-.pagination>li>span:focus,
-.pagination>li>span:hover {
-    z-index: 1;
-    color: #23527c;
-    background-color: #eee;
-    border-color: #ddd
-}
-
 .pagination>.active>a,
 .pagination>.active>a:focus,
 .pagination>.active>a:hover,
@@ -7981,18 +7964,6 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
     cursor: default;
     background-color: #337ab7;
     border-color: #337ab7
-}
-
-.pagination>.disabled>a,
-.pagination>.disabled>a:focus,
-.pagination>.disabled>a:hover,
-.pagination>.disabled>span,
-.pagination>.disabled>span:focus,
-.pagination>.disabled>span:hover {
-    color: #777;
-    cursor: not-allowed;
-    background-color: #fff;
-    border-color: #ddd
 }
 
 .pagination-lg>li>a,
@@ -16913,7 +16884,6 @@ button.close {
     background: #000
 }
 
-
 .owl-carousel .owl-video-play-icon:hover {
     transform: scale(1.3)
 }
@@ -18020,134 +17990,6 @@ fieldset {
     }
 }
 
-@font-face {
-    font-display: swap;
-    font-family: open sans;
-    font-style: normal;
-    font-weight: 300;
-    src: url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-300.eot);
-    src: local("Open Sans Light"), local("OpenSans-Light"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-300.eot?#iefix) format("embedded-opentype"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-300.woff2) format("woff2"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-300.woff) format("woff"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-300.ttf) format("truetype"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-300.svg#OpenSans) format("svg")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: open sans;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-regular.eot);
-    src: local("Open Sans Regular"), local("OpenSans-Regular"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-regular.eot?#iefix) format("embedded-opentype"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-regular.woff2) format("woff2"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-regular.woff) format("woff"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-regular.ttf) format("truetype"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-regular.svg#OpenSans) format("svg")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: open sans;
-    font-style: normal;
-    font-weight: 600;
-    src: url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-600.eot);
-    src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-600.eot?#iefix) format("embedded-opentype"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-600.woff2) format("woff2"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-600.woff) format("woff"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-600.ttf) format("truetype"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-600.svg#OpenSans) format("svg")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: open sans;
-    font-style: normal;
-    font-weight: 700;
-    src: url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-700.eot);
-    src: local("Open Sans Bold"), local("OpenSans-Bold"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-700.eot?#iefix) format("embedded-opentype"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-700.woff2) format("woff2"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-700.woff) format("woff"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-700.ttf) format("truetype"), url(/sites/all/themes/starkish/fonts/OpenSans/open-sans-v15-latin-700.svg#OpenSans) format("svg")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: 300;
-    src: url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-300.eot);
-    src: local("Roboto Light"), local("Roboto-Light"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-300.eot?#iefix) format("embedded-opentype"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-300.woff2) format("woff2"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-300.woff) format("woff"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-300.ttf) format("truetype"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-300.svg#Roboto) format("svg")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-regular.eot);
-    src: local("Roboto"), local("Roboto-Regular"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-regular.eot?#iefix) format("embedded-opentype"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-regular.woff2) format("woff2"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-regular.woff) format("woff"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-regular.ttf) format("truetype"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-regular.svg#Roboto) format("svg")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: 500;
-    src: url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-500.eot);
-    src: local("Roboto Medium"), local("Roboto-Medium"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-500.eot?#iefix) format("embedded-opentype"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-500.woff2) format("woff2"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-500.woff) format("woff"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-500.ttf) format("truetype"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-500.svg#Roboto) format("svg")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: roboto;
-    font-style: normal;
-    font-weight: 700;
-    src: url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-700.eot);
-    src: local("Roboto Bold"), local("Roboto-Bold"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-700.eot?#iefix) format("embedded-opentype"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-700.woff2) format("woff2"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-700.woff) format("woff"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-700.ttf) format("truetype"), url(/sites/all/themes/starkish/fonts/Roboto/roboto-v18-latin-700.svg#Roboto) format("svg")
-}
-
-@font-face {
-    font-display: swap;
-    font-family: fontawesome;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/sites/all/themes/starkish/fonts/FontAwesome.otf)
-}
-
-@font-face {
-    font-family: lato;
-    font-style: normal;
-    font-weight: 300;
-    src: local("Lato Light"), local("Lato-Light"), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format("woff2");
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-}
-
-@font-face {
-    font-family: lato;
-    font-style: normal;
-    font-weight: 300;
-    src: local("Lato Light"), local("Lato-Light"), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPGQ.woff2) format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-}
-
-@font-face {
-    font-family: lato;
-    font-style: normal;
-    font-weight: 400;
-    src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjxAwXjeu.woff2) format("woff2");
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-}
-
-@font-face {
-    font-family: lato;
-    font-style: normal;
-    font-weight: 400;
-    src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2) format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-}
-
-@font-face {
-    font-family: lato;
-    font-style: normal;
-    font-weight: 700;
-    src: local("Lato Bold"), local("Lato-Bold"), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwaPGR_p.woff2) format("woff2");
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-}
-
-@font-face {
-    font-family: lato;
-    font-style: normal;
-    font-weight: 700;
-    src: local("Lato Bold"), local("Lato-Bold"), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-}
-
 .fltr #views-exposed-form-what-s-hot-page .bootstrap-select.btn-group .dropdown-menu {
     top: 100%;
     width: auto;
@@ -18224,8 +18066,6 @@ div.form-item div.password-suggestions {
     background-color: transparent
 }
 
-
-
 input[type=tel]::-moz-input-placeholder,
 textarea::-moz-input-placeholder {
     opacity: 1
@@ -18266,7 +18106,6 @@ textarea {
     position: relative;
     width: 100%
 }
-
 
 .abs_buttons {
     position: absolute;
@@ -18381,8 +18220,6 @@ textarea {
 .rt_buttins ul li:nth-child(1) a {
     padding-left: 60px
 }
-
-
 
 .rt_buttins ul li:nth-child(2) a {
     padding-left: 62px
@@ -18902,8 +18739,6 @@ textarea {
     background: 0 0
 }
 
-
-
 .foot-menu ul li a {
     display: inline-block
 }
@@ -19097,8 +18932,6 @@ section.view-favorite-games .inn_box_panel1_box a>img {
 .new-carao .owl-dots {
     display: none
 }
-
-
 
 .new-carao .owl-prev {
     left: -27px;
@@ -19588,7 +19421,6 @@ div.rchcor {
     white-space: nowrap
 }
 
-
 .realted-caro .owl-prev {
     left: -27px;
     background-position: -180px -89px!important
@@ -19662,8 +19494,6 @@ div.rchcor {
 .rng-lki ul li a {
     position: relative
 }
-
-
 
 .upp:after {
     top: -5px;
@@ -19771,7 +19601,6 @@ div.rchcor {
     font: 400 16px/26px 'Open Sans', sans-serif;
     color: #999
 }
-
 
 .rng-lki ul li.no-btn a.voted-button {
     border-color: transparent!important;
@@ -20024,7 +19853,6 @@ div.rchcor {
     font: 500 16px/18px 'Open Sans', sans-serif
 }
 
-
 .lt_accor_box .panel-default>.panel-heading a.collapsed,
 .rt_tbl_bottom .tbl_box .media .media-body p strong span,
 .top_pagination .pagination li a:hover,
@@ -20169,10 +19997,6 @@ div.rchcor {
     padding: 30px 20px
 }
 
-.rt_tbl_bottom .tbl_box:last-child {
-    border: 0
-}
-
 .rt_tbl_bottom .tbl_box .media .media-left a img,
 body div.user-avatar-select label.option img {
     border-radius: 10px
@@ -20237,10 +20061,6 @@ body div.user-avatar-select label.option img {
 
 .rt_tbl_bottom .tbl_box p strong span {
     color: #fff
-}
-
-.rt_tbl_bottom .tbl_box:last-child p strong span {
-    color: #15a046
 }
 
 .rt_tbl_bottom .tbl_box .media .media-left {
@@ -20381,25 +20201,8 @@ body div.user-avatar-select label.option img {
     margin-bottom: 0
 }
 
-.pagination_sec .pagination li a {
-    border: 0;
-    border-right: 2px solid #171717;
-    font-size: 20px;
-    color: #fff!important;
-    background: #333
-}
-
 .pagination_sec .pagination li:last-child a {
     border: 0
-}
-
-.pagination_sec .pagination>li>a:focus,
-.pagination_sec .pagination>li>a:hover,
-.pagination_sec .pagination>li>span:focus,
-.pagination_sec .pagination>li>span:hover {
-    border-right: 2px solid #7b7777;
-    color: #fff;
-    background-color: #7b7777
 }
 
 .pagination_sec .pagination>li:last-child a:focus,
@@ -21748,9 +21551,6 @@ body div.user-avatar-select label.option img {
         width: 15%;
         padding: 15px 10px
     }
-    .rt_tbl_bottom .tbl_box:last-child {
-        width: 10%
-    }
     .viss {
         padding-top: 5px
     }
@@ -22318,7 +22118,7 @@ body div.user-avatar-select label.option img {
         padding: 5px 15px
     }
     .rt_tbl_top .tbl_box:last-child {
-        width: 10%
+        width: 16%
     }
     .rt_tbl_bottom .tbl_box:first-child {
         width: 60%;
@@ -22327,9 +22127,6 @@ body div.user-avatar-select label.option img {
     .rt_tbl_bottom .tbl_box {
         width: 15%;
         padding: 15px 5px
-    }
-    .rt_tbl_bottom .tbl_box:last-child {
-        width: 10%
     }
     .viss {
         padding-top: 5px
@@ -23589,7 +23386,6 @@ body div.user-avatar-select label.option img {
     }
 }
 
-
 @media only screen and (max-width:480px) {
     .mobile-hide {
         display: none
@@ -23664,8 +23460,6 @@ body div.user-avatar-select label.option img {
 .ympb_target_surfer {
     background: #171717
 }
-
-
 
 @media only screen and (max-width:767px) {
     .hvr-float-shadow:active,
@@ -23832,7 +23626,6 @@ form.webform-client-form div {
     background: #12893c
 }
 
-
 .rt_buttins ul li:nth-child(4) a {
     border: 1px solid #fff;
     text-indent: -2000em
@@ -23895,7 +23688,6 @@ form.webform-client-form div {
         padding-right: 70px
     }
 }
-
 
 .top_panel_sec {
     padding-bottom: 10px
@@ -24019,13 +23811,6 @@ form.webform-client-form div {
     }
 }
 
-@media screen and (max-width:1399px) {
-    .node_rating_progress_bar {
-        width: 28%;
-        left: 8%
-    }
-}
-
 @media screen and (max-width:1150px) {
     .node_rating_progress_bar {
         width: 30%;
@@ -24037,13 +23822,6 @@ form.webform-client-form div {
     .node_rating_progress_bar {
         width: 32%;
         left: 7%
-    }
-}
-
-@media screen and (max-width:800px) {
-    .node_rating_progress_bar {
-        width: 34%;
-        left: 8%
     }
 }
 
@@ -24625,8 +24403,6 @@ only screen and (min-device-width:1280px) and (max-device-width:1280px) and (dev
     background: 0 0
 }
 
-
-
 .pic_box {
     position: relative;
     display: block;
@@ -25173,8 +24949,6 @@ only screen and (min-device-width:1280px) and (max-device-width:1280px) and (dev
 .topgm .rt_buttins ul li:nth-child(3) a {
     padding-left: 40px
 }
-
-
 
 .topgm .rt_buttins ul li:nth-child(3) a:after {
     width: 23px;
@@ -26176,8 +25950,6 @@ body.page-taxonomy .recent-games {
         flex-direction: column
     }
 }
-
-
 
 @media screen and (min-width:2000px) {
     .addiction-game-sec.exclusive-games .game-gallerty .lock-for-not-subscribed>.lock,
@@ -28718,8 +28490,6 @@ form#user-register-form>div .form-actions input:hover {
     display: flex
 }
 
-
-
 .rating-plays-text,
 .view-empty {
     -webkit-box-orient: vertical;
@@ -29492,10 +29262,6 @@ div.avatar-selection-pager-nav a:hover {
     width: 7%
 }
 
-.progress progress[value="8"]~.progress-bg .progress-bar {
-    width: 8%
-}
-
 .progress progress[value="9"]~.progress-bg .progress-bar {
     width: 9%
 }
@@ -29969,7 +29735,6 @@ div.avatar-selection-pager-nav a:hover {
     background-color: #1c1c1c
 }
 
-
 #js-preroll-container-wrapper {
     width: 900px!important;
     margin-bottom: 120px!important
@@ -30143,8 +29908,6 @@ body.mobile-game-frame-open .rech-code-gam {
     height: 100%
 }
 
-
-
 body.mobile-game-frame-open .rech-code-gam.rotate iframe,
 body.mobile-game-frame-open .rech-code-gam.rotate object {
     visibility: hidden
@@ -30160,8 +29923,6 @@ body.mobile-game-frame-open .home-game-trigger {
     background-color: rgba(255, 255, 255, .5);
     cursor: pointer
 }
-
-
 
 body.mobile-game-frame-open .close-game-trigger:hover,
 body.mobile-game-frame-open .home-game-trigger:hover {
@@ -30998,7 +30759,6 @@ only screen and (min-device-width:1366px) and (max-device-width:1366px) and (dev
         height: 75px;
         content: ''
     }
-    
     .instant-nav-menu .sector .button-next {
         display: none;
         color: #fff;
@@ -31157,7 +30917,6 @@ only screen and (min-device-width:1366px) and (max-device-width:1366px) and (dev
     border-radius: 0 6px 6px 0;
     background: 0 0
 }
-
 
 .page-search .inn_search_panel_sec .inn_serach_lt .search-form .form-submit {
     position: absolute;
@@ -31668,8 +31427,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     margin: auto
 }
 
-
-
 .playlist-game__slider .owl-prev {
     left: -17px;
     background-position: -180px -89px
@@ -31891,8 +31648,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     border: 2px solid #fff;
     border-radius: 10px
 }
-
-
 
 .fb-page {
     margin-bottom: 10px
@@ -32137,7 +31892,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     color: #fff
 }
 
-
 .hot-games .top-head .top-head-rt .fltr .views-widget {
     height: 100%
 }
@@ -32192,8 +31946,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     max-height: 100%!important;
     height: 100%!important
 }
-
-
 
 .rech-code-gam .get-flash {
     position: relative;
@@ -32401,8 +32153,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     margin: 0 auto
 }
 
-
-
 .mobile-page .container {
     max-width: 370px
 }
@@ -32411,8 +32161,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     padding: 10px 0 0 10px;
     margin-bottom: -15px
 }
-
-
 
 .mobile-page .container .mobile-games .game-gallerty .row {
     margin: 0
@@ -32440,8 +32188,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
 .page-mobile-games .addiction-game-sec {
     padding-top: 0
 }
-
-
 
 .dialog {
     position: fixed;
@@ -32851,8 +32597,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     }
 }
 
-
-
 .block-ag-footer-content {
     position: fixed;
     z-index: 15001;
@@ -32875,8 +32619,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     margin-right: -15px
 }
 
-
-
 .footer-content .addiction-game-sec,
 .instant-navigation-tablet {
     display: -webkit-box;
@@ -32894,13 +32636,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     -ms-flex: 1 1 100%;
     flex: 1 1 100%
 }
-
-
-
-
-
-
-
 
 @media only screen and (min-width:1940px) {
     .add-bx-side .inn_box_panel1:last-child {
@@ -32934,8 +32669,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     position: relative;
     padding: 0 7px
 }
-
-
 
 .instant-navigation-tablet__wrapper {
     position: relative;
@@ -32994,7 +32727,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     transition: all .3s
 }
 
-
 .instant-navigation-tablet__vote-down a,
 .instant-navigation-tablet__vote-up a {
     background-repeat: no-repeat;
@@ -33006,7 +32738,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     -webkit-transition: all .3s;
     transition: all .3s
 }
-
 
 .instant-navigation-tablet__menu {
     background-color: #2b2b2b;
@@ -33023,7 +32754,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     -ms-flex-align: center;
     align-items: center
 }
-
 
 .instant-navigation-tablet__home a:focus,
 .instant-navigation-tablet__home a:hover {
@@ -34129,12 +33859,9 @@ section.view-favorite-games .game-gallerty .row .pic_box {
     background-image: radial-gradient(circle 1580px at center, #3a3a3a 0%, rgba(58, 58, 58, .64) 36%, rgba(255, 255, 255, 0) 100%)
 }
 
-
 .subscribe__banner-text {
     text-align: center
 }
-
-
 
 @media screen and (max-width:640px) {
     .subscribe__banner-text-wrapper {
@@ -34354,8 +34081,6 @@ section.view-favorite-games .game-gallerty .row .pic_box {
         padding-right: 15px
     }
 }
-
-
 
 @media screen and (max-width:1199px) {
     .subscribe__modal {
@@ -35605,7 +35330,6 @@ form#recurlyjs-subscribe-form>div .form-item.form-type-password .password-toggle
     font-size: 12px
 }
 
-
 .recurlyjs-update-billing-form-processed .form-actions:hover {
     background: #15a046;
     border: 1px solid #15a046
@@ -35676,9 +35400,6 @@ div.subscribe__desc-wrapper {
     margin-bottom: 0;
     margin-left: 7px
 }
-
-
-
 
 .page-game-pass-welcome .baseform_text {
     font-size: 20px;
@@ -35800,8 +35521,6 @@ div.foot-btm {
     background: #3a3a3a
 }
 
-
-
 #base_form_container {
     width: 1000px;
     margin: 0 auto;
@@ -35836,7 +35555,6 @@ div.foot-btm {
 .subscribe__plans-list .subscribe__plans-item.plan-free .subscribe__cost-sup {
     margin-bottom: 2px
 }
-
 
 .gamepass:hover {
     border-color: #e73c30
@@ -35961,9 +35679,6 @@ div.foot-btm {
     width: 176px;
     height: 126px
 }
-
-
-
 
 .gamepass-upgrade {
     border: 2px solid #00be0c;
@@ -36414,8 +36129,6 @@ div.foot-btm {
     margin-right: 15px
 }
 
-
-
 .premium-games .inn_box_panel1_box:nth-child(4) {
     margin-right: 0
 }
@@ -36440,9 +36153,6 @@ div.foot-btm {
         width: 765px
     }
 }
-
-
-
 
 #cls_ctnr:after,
 #cls_pop {
@@ -36540,9 +36250,6 @@ div.foot-btm {
     justify-content: center
 }
 
-
-
-
 @media only screen and (max-width:1599px) {
     #cls_pop {
         height: 460px;
@@ -36578,8 +36285,6 @@ div.foot-btm {
         height: 117px
     }
 }
-
-
 
 .secure-wrapper {
     width: 50%;
@@ -37218,8 +36923,6 @@ div.foot-btm {
     height: 50px
 }
 
-
-
 .recurlyjs-subscribe-form-processed .recurlyjs-cc-info .form-item div,
 .recurlyjs-subscribe-form-processed .recurlyjs-cc-info.form-wrapper {
     margin-bottom: 20px
@@ -37665,8 +37368,6 @@ only screen and (min-device-width:1366px) and (max-device-width:1366px) and (dev
     }
 }
 
-
-
 body.mobile-ua .mobile-thumb-image .btn_content.unavailable-notice {
     display: block;
     font-size: 20px;
@@ -37908,10 +37609,7 @@ body.mobile-ua .thumbnail-image.mobile-enabled:before {
     .single-row-mmo.addiction-game-sec .inn_box_panel1:nth-child(n+6) {
         display: block
     }
-    
 }
-
-
 
 @media only screen and (min-width:1596px) {
     .addiction-game-sec>.container .inn_box_panel1:nth-child(n+15),
@@ -37920,7 +37618,6 @@ body.mobile-ua .thumbnail-image.mobile-enabled:before {
     .single-row-mmo.addiction-game-sec .inn_box_panel1:nth-child(n+8) {
         display: block
     }
-    
 }
 
 @media only screen and (min-width:1791px) {
@@ -37930,7 +37627,6 @@ body.mobile-ua .thumbnail-image.mobile-enabled:before {
     .single-row-mmo.addiction-game-sec .inn_box_panel1:nth-child(n+9) {
         display: block
     }
-   
 }
 
 @media only screen and (min-width:1986px) {
@@ -37940,7 +37636,6 @@ body.mobile-ua .thumbnail-image.mobile-enabled:before {
     .single-row-mmo.addiction-game-sec .inn_box_panel1:nth-child(n+10) {
         display: block
     }
-    
 }
 
 @media only screen and (min-width:2181px) {
@@ -37950,7 +37645,6 @@ body.mobile-ua .thumbnail-image.mobile-enabled:before {
     .single-row-mmo.addiction-game-sec .inn_box_panel1:nth-child(n+11) {
         display: block
     }
- 
 }
 
 @media only screen and (min-width:2376px) {
@@ -37960,7 +37654,6 @@ body.mobile-ua .thumbnail-image.mobile-enabled:before {
     .single-row-mmo.addiction-game-sec .inn_box_panel1:nth-child(n+12) {
         display: block
     }
-   
 }
 
 @media only screen and (min-width:2571px) {
@@ -37976,56 +37669,48 @@ body.mobile-ua .thumbnail-image.mobile-enabled:before {
     .addiction-game-sec.classic_game>.container .inn_box_panel1:nth-child(n+11) {
         display: block
     }
-    
 }
 
 @media only screen and (min-width:1206px) {
     .addiction-game-sec.classic_game>.container .inn_box_panel1:nth-child(n+21) {
         display: block
     }
-  
 }
 
 @media only screen and (min-width:1401px) {
     .addiction-game-sec.classic_game>.container .inn_box_panel1:nth-child(n+25) {
         display: block
     }
-   
 }
 
 @media only screen and (min-width:1596px) {
     .addiction-game-sec.classic_game>.container .inn_box_panel1:nth-child(n+29) {
         display: block
     }
-   
 }
 
 @media only screen and (min-width:1791px) {
     .addiction-game-sec.classic_game>.container .inn_box_panel1:nth-child(n+33) {
         display: block
     }
-   
 }
 
 @media only screen and (min-width:1986px) {
     .addiction-game-sec.classic_game>.container .inn_box_panel1:nth-child(n+37) {
         display: block
     }
-    
 }
 
 @media only screen and (min-width:2181px) {
     .addiction-game-sec.classic_game>.container .inn_box_panel1:nth-child(n+41) {
         display: block
     }
-   
 }
 
 @media only screen and (min-width:2376px) {
     .addiction-game-sec.classic_game>.container .inn_box_panel1:nth-child(n+45) {
         display: block
     }
-    
 }
 
 @media only screen and (min-width:2571px) {
@@ -38432,7 +38117,6 @@ body.mobile-ua .thumbnail-image.mobile-enabled:before {
         display: none
     }
 }
-
 
 .skeleton-body {
     -webkit-animation-name: skeletonAnimate
@@ -39320,8 +39004,6 @@ only screen and (min-device-width:1280px) and (max-device-width:1280px) and (dev
     background: #fff
 }
 
-
-
 .input-price-number {
     text-align: center;
     -moz-appearance: textfield;
@@ -39342,4 +39024,3 @@ only screen and (min-device-width:1280px) and (max-device-width:1280px) and (dev
     box-sizing: content-box;
     border-radius: 2px;
 }
-

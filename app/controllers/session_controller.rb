@@ -1,4 +1,10 @@
 class SessionController < ApplicationController
+  before_action :_header  
+
+  def _header
+    @danhmucs = Danhmuc.all
+  end
+
   def new
   end
 
@@ -9,8 +15,8 @@ class SessionController < ApplicationController
       log_in user
       redirect_to "/"
     else
-      flash[:danger] = "Invalid email/password combination"
-      render :login
+      flash[:danger] = "Sai tên tài khoản hoặc mật khẩu"
+      render :login 
     end
   end
 

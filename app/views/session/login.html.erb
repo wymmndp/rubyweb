@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <%= render 'users/header' %>
+<%= flash[:danger] %>
 <body class="push-body html not-front not-logged-in no-sidebars page-user">
     <div id="main">
         <div id="main_inner">
             <div class="region region-content">
                 <div class="block block-system block-odd first last clearfix" id="block-system-main">
-         
                 <%= form_for :session, url: login_path,html: {id: "user-login"} do |f| %>
                     <div>
                         <div class="form-item form-type-textfield form-item-name">
@@ -27,22 +27,6 @@
             </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function() {
-            $('#user-login').validate({
-                rules: {
-                    username: {
-                        required:true,
-                        minlength:3,
-                    },
-                    pass: {
-                        required:true,
-                        minlength:6
-                    }
-                }
-            });
-        })
-    </script>
 </body>
 
 

@@ -11,7 +11,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.text :lastname
       t.text :email
       t.datetime :time
-      t.timestamps
+   
     end
   end
 end

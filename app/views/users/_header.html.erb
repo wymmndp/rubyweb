@@ -25,7 +25,9 @@
                                 </ul>
                             </div>
                             <div class="form-actions form-wrapper" id="edit-actions">
-                                <input type="submit" id="edit-submit" name="op" value class="form-submit">
+                                <input type="hidden" id="edit-submit" name="mincoin" value="0" class="form-submit">
+                                <input type="hidden" id="edit-submit" name="maxcoin" value="0" class="form-submit">
+                                <input type="submit" id="edit-submit" value class="form-submit">
                             </div>
                         </form>
                     </div>
@@ -73,8 +75,8 @@
                         </li>
                         <% if session[:user_id] %>
                         <li class='menu-item menu-item-primary'>
-                            <a href="">
-                                <%= link_to 'Tài Khoản' , register_url%>
+                            <a href="user/<%= session[:user_id] %>">
+                                Tài Khoản
                             </a>
                         </li>
                         <li class='menu-item menu-item-primary'>
@@ -140,7 +142,7 @@
                         <div class="owl-stage" style="transform: translate3d(-4816.625, 0px, 0px); transition: all 0.25s ease 0s; width: 21010px;">
                             <% @danhmucs.each do |danhmuc| %>   
                             <div class="owl-item cloned" style="width: 155.375px; margin-right: 5px;">
-                                <a href="{{ URL::to('tag/' . $danhmuc->iddanhmuc) }}" class="item caro-itm media">
+                                <a href="/tag/<%= danhmuc.id%>" class="item caro-itm media">
                                     <div class="media-left">
                                         <img typeof="foaf:Image" src="<%= danhmuc.imgdanhmuc %>" width="68" height="60" alt="">
                                     </div>
@@ -169,7 +171,7 @@
         </div>
     </section>
     <div id="cd-cart">
-         <% if session[:user_id] %>
+        <% if session[:user_id] %>
         <h2>Cart</h2>
         <ul class="cd-cart-items">
             <div class="load"></div>
@@ -178,7 +180,7 @@
             <p>Your Coin <span class="coinhave">
 
 
-                </span></p>
+            </span></p>
         </div>
         <div class="cd-cart-total" style="border-bottom: 1px solid #e0e6ef;">
             <p>Total <span class="precoin" style="color: red;">
@@ -195,11 +197,11 @@
         <a href="javascript:void(0)" class="checkout-btn">Thanh toán</a>
        <% else %>
         <div class="wrap-login100">
-            <div style="margin: auto;" class="login100-pic js-tilt" data-tilt>
-                <img src="" alt="IMG">
+            <div style="margin: auto;width: 316px;" class="login100-pic js-tilt" data-tilt>
+                <img src="https://whynotaddicting.000webhostapp.com/image/img-01.png" alt="IMG" style="max-width: 100%;height:289px">
                 <div style="width: 100%;display: flex;flex-direction: column;padding: 20px;">
-                    <a href="" type="button" class="btn btn-success">Đăng Nhập</a>
-                    <a href="<%= link_to "login" %>" style="margin-top: 15px;" type="button" class="btn btn-danger">Đăng Ký</a>
+                    <a href="/login" type="button" class="btn btn-success">Đăng Nhập</a>
+                    <a href="/register" style="margin-top: 15px;" type="button" class="btn btn-danger">Đăng Ký</a>
                 </div>
             </div>
         </div>
@@ -207,20 +209,23 @@
     </div>
     <script>
         $(document).ready(function() {
+            var coinreturn = 0
             function loadPreInvoice(username) {
                 $.ajax({
-                    url: "{{route('loadPreInvoice')}}",
-                    method: "POST",
+                    url: "../loadPreinvoice",
+                    method: "get",
+                    contentType: "application/json",   
                     data: {
-                        _token: '{{csrf_token()}}',
                         username: username
                     },
                     success: function(data) {
+                        // alert(JSON.stringify(data))
+                        // alert(data.preinvoices[0].idgame)
                         var html = "";
-                        for (var k in data) {
-                            var idgame = data[k].idgame;
-                            var name = data[k].namegame;
-                            var coin = data[k].coin;
+                        for (var k in data.preinvoices) {
+                            var idgame = data.preinvoices[k].idgame;
+                            var name = data.preinvoices[k].namegame;
+                            var coin = data.preinvoices[k].coin;
                             html += '<li>' + name + '<div class="cd-price">' + coin +
                                 '</div><a href="javascript:void(0)" data-idgame="' + idgame +
                                 '" class="cd-item-remove cd-img-replace">Remove</a></li>';
@@ -232,17 +237,23 @@
 
             function loadCoin(username) {
                 $.ajax({
-                    url: "{{route('loadCoin')}}",
-                    method: "post",
+                    url: "../loadCoin",
+                    method: "get",
+                    contentType: "application/json",   
                     data: {
-                        _token: '{{csrf_token()}}',
                         username: username
                     },
                     success: function(data) {
-                        $('.coinhave').html(data['coinhave'] + " Coin");
-                        $('.precoin').html(data['precoin'] + " Coin");
-                        if (data['coinminus'] >= 0) {
-                            $('.coinreturn').html(data['coinminus'] + " Coin");
+                        var totalcoin = 0
+                        var mycoin = data.mycoin[0].coinhave
+                        for(var k in data.totalcoin) {
+                            totalcoin += data.totalcoin[k].coin
+                        }
+                        $('.coinhave').html(mycoin + " Coin");
+                        $('.precoin').html(totalcoin + " Coin");
+                        coinreturn = mycoin - totalcoin
+                        if (coinreturn >= 0) {
+                            $('.coinreturn').html(coinreturn + " Coin");
                             $('.checkout-btn').css('display', "block");
                         } else {
                             $('.coinreturn').html('Không đủ COIN để mua hàng');
@@ -254,55 +265,55 @@
 
             function removeGameFromCart(username, id) {
                 $.ajax({
-                    url: "{{route('removeGameFromCart')}}",
-                    method: "post",
+                    url: "../removeGameFromCart",
+                    method: "get",
                     data: {
-                        _token: '{{csrf_token()}}',
                         username: username,
                         id: id
                     },
-                    success: function(data) {}
+                    success: function(data) {
+                        loadPreInvoice(username);
+                        loadCoin(username);
+                    }
                 })
             }
 
-            function buy(username, listIDgame) {
+            function buy(username, id,coinreturn) {
                 $.ajax({
-                    url: "{{route('buy')}}",
+                    url: "../buy",
                     method: "get",
                     data: {
-                        _token: '{{csrf_token()}}',
                         username: username,
-                        listIDgame: listIDgame
+                        id: id,
+                        coinreturn: coinreturn
                     },
                     success: function(data) {
-                        alert(data);
-                        loadPreInvoice(username);
-                        loadCoin(username);
-                        location.reload();
                     }
                 })
             }
             $('#cd-cart_trigger').on('click', function() {
-                var username = '{{session()->get("username")}}';
+                var username = '<%=session[:user_id]%>';
                 loadPreInvoice(username);
                 loadCoin(username);
             })
             $(document).on('click', '.cd-item-remove', function() {
-                var username = '{{session()->get("username")}}';
+                var username = '<%=session[:user_id]%>';
                 var idgame = $(this).data("idgame");
                 removeGameFromCart(username, idgame);
-                loadPreInvoice(username);
-                loadCoin(username);
             });
             $('.checkout-btn').on('click', function() {
-                var username = '{{session()->get("username")}}';
+                var username = '<%=session[:user_id]%>';
                 var dataList = $(".cd-item-remove").map(function() {
                     return $(this).data("idgame");
                 }).get();
                 var listIDArray = dataList.splice(',');
-                buy(username, listIDArray);
+                for(var k in listIDArray) {
+                    removeGameFromCart(username,listIDArray[k])
+                    buy(username,listIDArray[k],coinreturn)
+                }
+                location.reload();
             })
-
+            
         })
     </script>
     <script>

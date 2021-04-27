@@ -28,14 +28,14 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <h4 class="txt_box"><a href="game/"><%= game.namegame %></a></h4>
+                                                <h4 class="txt_box"><a href="../game/<%= game.id%>"><%= game.namegame %></a></h4>
                                             </div>
                                         </div>
                                         <% end %>  
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    {!! $gameincategories->links() !!}
+                                        <%= will_paginate @games %>
                                 </div>
                             </div>
                         </div>

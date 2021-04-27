@@ -1,0 +1,11 @@
+.page-search .inn_search_panel_sec .inn_serach_lt .search-form .views-submit-button:after {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url("png_spritesheet.png");
+    background-repeat: no-repeat;
+    content: '';
+}

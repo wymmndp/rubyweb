@@ -11641,11 +11641,6 @@ div.rchcor {
     padding: 5px 10px
 }
 
-.rt_tbl_top .tbl_box:last-child {
-    width: 8%;
-    border: 0
-}
-
 .rt_tbl_top .top-head-rt {
     float: left
 }
@@ -11683,11 +11678,6 @@ div.rchcor {
 .rt_tbl_bottom .tbl_box:first-child {
     width: 62%;
     padding: 30px 20px
-}
-
-.rt_tbl_bottom .tbl_box:last-child {
-    width: 8%;
-    border: 0
 }
 
 .rt_tbl_bottom .tbl_box .media .media-left a img,
@@ -11898,25 +11888,8 @@ body div.user-avatar-select label.option img {
     margin-bottom: 0
 }
 
-.pagination_sec .pagination li a {
-    border: 0;
-    border-right: 2px solid #171717;
-    font-size: 20px;
-    color: #fff!important;
-    background: #333
-}
-
 .pagination_sec .pagination li:last-child a {
     border: 0
-}
-
-.pagination_sec .pagination>li>a:focus,
-.pagination_sec .pagination>li>a:hover,
-.pagination_sec .pagination>li>span:focus,
-.pagination_sec .pagination>li>span:hover {
-    border-right: 2px solid #7b7777;
-    color: #fff;
-    background-color: #7b7777
 }
 
 .pagination_sec .pagination>li:last-child a:focus,
@@ -13265,9 +13238,6 @@ body div.user-avatar-select label.option img {
         width: 15%;
         padding: 15px 10px
     }
-    .rt_tbl_bottom .tbl_box:last-child {
-        width: 10%
-    }
     .viss {
         padding-top: 5px
     }
@@ -13844,9 +13814,6 @@ body div.user-avatar-select label.option img {
     .rt_tbl_bottom .tbl_box {
         width: 15%;
         padding: 15px 5px
-    }
-    .rt_tbl_bottom .tbl_box:last-child {
-        width: 10%
     }
     .viss {
         padding-top: 5px
@@ -22804,8 +22771,6 @@ only screen and (min-device-width:1366px) and (max-device-width:1366px) and (dev
     background: 0 0
 }
 
-
-
 .page-search .inn_search_panel_sec .inn_serach_lt .search-form .form-submit {
     position: absolute;
     z-index: 1;
@@ -22816,8 +22781,8 @@ only screen and (min-device-width:1366px) and (max-device-width:1366px) and (dev
     border: 0;
     border-radius: 0 6px 6px 0;
     background: 0 0
-    
 }
+
 .page-search .inn_search_panel_sec .inn_serach_lt .search-form .views-submit-button:after {
     position: absolute;
     top: 50%;

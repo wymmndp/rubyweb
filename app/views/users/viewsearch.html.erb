@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%= render "users/header" %>
+
 <body class="push-body html not-front not-logged-in no-sidebars page-search">
     <div id="main">
         <div id="main_inner">
@@ -35,21 +36,22 @@
                                                     <div class="search-form">
                                                         <div class="lt_search_box hidden-sm hidden-xs">
                                                             <h5>Search</h5>
-                                                            <div class="form-item form-type-textfield form-item-search-api-views-fulltext">
-                                                                <input placeholder="Search here" type="text" id="search-content-input" name="search_api_views_fulltext" value="<%= params[:namegame] %>" size="30" maxlength="128" class="form-text">
+                                                            <div class="form-item form-type-textfield form-item-search-api-views-fulltext" style="width:85%">
+                                                                <input placeholder="Search here" type="text" id="search-content-input" name="namesearch" value="<%= params[:namesearch] %>" size="30" maxlength="128" class="form-text">
                                                             </div>
                                                         </div>
                                                         <div class="views-exposed-widget views-submit-button">
-                                                            <a href="javascript:void(0)" type="submit" id="edit-submit-search" name="" value="" class="form-submit"></a>
+                                                            <input href="javascript:void(0)" type="submit" id="edit-submit-search" name="" value="" class="form-submit"></a>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="price" style="display: flex;font-size: 16px;margin-top: 15px;">
+                                                    <input type="number" class="input-price-number col-filter-price" value="<%= params[:mincoin]%>" name="mincoin" id="mincoin">
+                                                    <p style="font-size: 16px;margin-right: 10px;margin-left: 10px;"> to </p>
+                                                    <input type="number" class="input-price-number col-filter-price" value="<%= params[:maxcoin]%>" name="maxcoin" id="maxcoin">
+                                                </div>
                                             </form>
-                                            <div class="price" style="display: flex;font-size: 16px;margin-top: 15px;">
-                                                <input type="number" class="input-price-number col-filter-price" value="0" name="filter_price_from" id="mincoin">
-                                                <p style="font-size: 16px;margin-right: 10px;margin-left: 10px;"> to </p>
-                                                <input type="number" class="input-price-number col-filter-price" value="0" name="filter_price_from" id="maxcoin">
-                                            </div>
+
                                         </div>
 
                                     </div>
@@ -69,41 +71,27 @@
     </div>
     <script>
         $(document).ready(function() {
-
             $('#edit-submit-search').on('click', function() {
-                var content = $('#search-content-input').val();
-                var mincoin = $('#mincoin').val();
-                var maxcoin = $('#maxcoin').val();
-                $.ajax({
-                    url: "/search",
-                    type: "get",
-                    data: {
-                        content: content,
-                        mincoin: mincoin,
-                        maxcoin: maxcoin,
-                    },
-                    success: function(data) {
-                        alert(content)
-                    },
-                    error: function(data) {}
-                })
-            })
-            // function search(content,mincoin,maxcoin) {
-            //     $.ajax({
-            //         url: "{{route('searchCoin')}}",
-            //         type: 'get',
-            //         data: {
-            //             _token: '{{csrf_token()}}',
-            //             content : content,
-            //             mincoin: mincoin,
-            //             maxcoin: maxcoin,
-            //         },
-            //         success: function(data) {
-            //             $('.loadResult').html(data);
-            //         },
-            //     });
-            // }
+                // var content = $('#search-content-input').val();
+                // var mincoin = $('#mincoin').val();
+                // var maxcoin = $('#maxcoin').val();
+                // $.ajax({
+                //     url: "/searchajax",
+                //     type: "get",
+                //     data: {
+                //         content: content,
+                //         mincoin: mincoin,
+                //         maxcoin: maxcoin,
+                //     },
+                //     success: function(data) {
 
+                //     },
+                //     error: function(data) {
+
+                //     }
+
+
+            })
         })
     </script>
 </body>

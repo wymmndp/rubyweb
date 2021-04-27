@@ -18,4 +18,12 @@ Rails.application.routes.draw do
   get "/tag/:idcategory", to:"users#gameincategory"
   # search
   get "/search", to:"users#viewsearch"
+  # cart
+  get "/addGameToCart" => "users#addGameToCart"
+  get "/loadPreinvoice" => "users#loadPreinvoice"
+  get "/loadCoin" => "users#loadCoin"
+  get "/removeGameFromCart" => "users#removeGameFromCart"
+  get "/buy" => "users#buy"
+  # detail game
+  get "/user/:username" => "users#detailuser"
 end

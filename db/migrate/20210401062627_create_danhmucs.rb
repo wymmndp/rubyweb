@@ -3,7 +3,7 @@ class CreateDanhmucs < ActiveRecord::Migration[6.1]
     create_table :danhmucs do |t|
       t.text :tendanhmuc
       t.text :imgdanhmuc
-      t.timestamps
+     
     end
   end
 end
