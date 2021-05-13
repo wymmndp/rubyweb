@@ -79,6 +79,7 @@ class UsersController < ApplicationController
       @user = User.new user_params
       @user.coinhave = 999999999
       @user.allcoin = 999999999
+      @user.avatar = "https://i.pinimg.com/736x/e3/41/b3/e341b3ce61dd0d130bd8ab1dd04153d7.jpg"
       if @user.save
         flash[:success] = "Register success"
         redirect_to "/login"
